@@ -1,0 +1,33 @@
+# Resumo TPC4
+## 1/10/2024
+
+## Autora: Clara Carvalho A107195
+Para este trabalho foi-nos pedido para realizar uma aplicação com listas, que realize diversas opções na lista, como por exemplo que crie uma lista aaletória, que o utilizador crie uma lista, que some os elementos da lista, que faça a média, que indique o máximo e o minimo da lista e que indique a posição do número pedido, caso este se encontre na lista.
+
+# Primeiro passo e primeira função
+Inicialmente criei um menu para que apresente ao utilizador as varias opções que poderá escolher para fazer e anteriormente coloquei o comando from random import randrange para as vezes que fosse necessário utilizar o comando de randrange para gerar um número aleatório. De seguida criei uma função para as opções que eram necessárias. Para a primeira opção (1) criei uma função que denominei de criarlista uma vez que consistia em criar uma lista aletóriamente com os número entre 1 e 100. Assim comecei por colocar a lista vazia e por defenir o número de elementos que tem a lista e como não foi mencionado quantos elementos eram necessários decidi colocar 5 elementos. Decidi utilizar o ciclo "for" e utilizei o "i in range(5)" pois iria fazer com que a lista tivesse 5 elementos ( o elemto na posição 0, o 1, o 2, o 3 e o 4) pois o comando range gera elementos ate a posição n-1. De seguida coloquei a variável n a ser um número aleatório entre 1 e 100 ( por isso usei o randrange(1,101), pois este comando vai até n-1 ,neste caso, até 100) e com o comando append adicionei á lista o número gerado, sendo estes gerados até á lista atingir 5 elementos devido ao ciclo for. Por fim dei return da lista.
+# Ciclo while
+Para que esta aplicação fosse executada da maneira correta realizei este trabalho de forma construtiva. Conforme ia fazendo uma função para uma determinada opção iria adicionando por baixo na zona de execução da  aplicação os passos necessários para que aquela função funciona-se. Assim mal terminei a função do cirar lista decidi colocar por baixo uma forma de a executar para poder testar. Comecei por introduzir a lista vazia, para que a lista fosse sempre iniciada vazia. De seguida coloquei o menu e coloquei um input para que questiona-se o utilizador que opção iria querer. Decidi colocar um ciclo while para que as funções funcionassem sempre em ciclo. Comecei por usar um if para quando o utilizador seleciona-se as opções 1,2,3,4,5,6,7,8,9 e para quando seleciona-se algo diferente destes e 0 coloquei "opção inválida" com um else. coloquei também fora o ciclo a opção 0 pois seria a opção de saída por isso colquei o while como sendo: while resp!=0. Quando o utilizador seleciona-se o 0 iria sair do ciclo e terminar a aplicação. 
+* Para o primeiro if coloquei a lista a ser a função de criar lista e dei print da lista para que o utilizador consegui-se ver a lista.
+
+# Segunda função
+Para a segunda função voltei atrás e criei uma função que denominei como lerlista cujo objetivo seria criar uma lista que continha os números inseridos pelo utilizador.Assim voltei a inserir a lista vazia para que os valores anteriores sejam substituidos pelos novos valores e utilizei novamente  o ciclo for e o i in range(5)para que sejam 5 elementos na lista. Considerei a variável n como o input dos números inseridos para a lista e coloquei i+1 pois i=0 e náo poderia pedir para inserir o 0 número. De seguida coloquei novamente o append para que conforme o ciclo vai acontecendo ir acrescentando o número á lista e coloquei o return da lista quando o ciclo acabar. Voltei novamente a ir abaixo ao while e desta vez inseri o if resp==2 colocando igualmente a opção 1 a lista a ser considerada a lerlista e o print desta para que o utilizador consiga ver a lista que criou.
+
+# Função de somar e da média
+* Para a função da soma como já tinhamos feito em várias aulas coloquei a variável soma em 0 e usei o ciclo for i in lista e coloquei a soma a ser igual á soma+i sendo i o elemento da lista. Desta forma a soma começa em 0+ o primeiro elemento da lista e vai somando aos seguintes elementos da lista. Por fim dei return á soma e no ciclo while coloquei a função da mesma forma como colquei nas anteriores porém no if coloquei que caso a opção 1 ou 2 não sejam realizadas a lista encontra-se vazia então caso esta opção seja acionada com a lista vazia fiz um print de "Lista Vazia".
+* Para a função média usei o mesmo pensamento que para a soma porém coloquei a média a ser realizada como a função da soma (soma todos os elementos da lista) a dividir pelo comprimento da lista (len(lista))
+
+# Máximo e mínimo
+Para o máximo e o mínimo da lista não criei função pois não achei necessário uma vez que usei o comando max e o comando min. Assim apenas fui ao ciclo while e coloquei um print que irá dizer automaticamente qual será o valor máximo ou mínimo da atual lista.
+
+# Ordem crescente e ordem decrescente
+Para ambas utilizei uma função porém apenas alterei um sinal de > para <.
+* Para a ordem  crescente considerei que a lista já estaria ordenada e apenas coloquei o ciclo while para no caso de ela não estar ordenada por ordem crescente, ou seja o ciclo irá ser percorrido e caso ele aconteça significa que irá devolver um "não", caso não aconteça é porque ela está ordenada por ordem crescente logo irá devolver um "sim". Assim utilizei o if para se o elemento da lista na posição i seja maior que o elemento da lista na posição i+1 significa que a lista não estã ordenada por ordem crescente. 
+* Para a ordem decrescente apenas inverti o sinal de maior para menor. 
+* Na estrutura ciclica while coloquei igualmente como coloquei para a opção 1 e 2 apenas alterando o nome das funções para estas novas funções.
+
+# procurar elemento
+* Por fim da opção de procurar um elemento defeni novamente uma função e coloquei a opção if que caso o elemento seja i pois coloquei que n==lista[i] irá devolver a posição do elemento ou seja a posição é i. CAso não exista na lista irá devolver -1 por isso coloquei return -1.
+* Na estrutura do while coloquei o n ser igual ao input do número que o utilizador irá indicar e de seguida irá ir á função que criei. Caso o número estja na lista irá devolver i(A posição do número na lista), caso não esteja irá aparecer uma mensagem a indicar que o número não se encontra na lista.
+
+Por fim fora do ciclo while ( pois essa opção seria caso o utilizador seleciona-se um 0 para sair da aplicação e ela não acontecer de novo) coloquei uma mensagem com a lista atual e a despedida ao utilizador. 
