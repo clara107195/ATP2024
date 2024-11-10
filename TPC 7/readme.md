@@ -1,0 +1,21 @@
+# Resumo TPC6
+## 27/10/2024
+
+# Autora: Clara Carvalho A107195
+
+Para este trabalho foi-nos pedido para realizar uma aplicação sobre dados metereológicos de um respetivo ano. Essa aplicação consistia em apenas juntar os vários exercícios da aula sendo cada função da aplicação e cada opção uma alínea do exercício da aula P7. Inicialmente foi-nos dado um modelo para guardar os registos de temperatura e de precipitação ao longo de vários dias numa variável intitulada de tabMeteo1. 
+
+* Função calcular a temperatura média e guardar a tebla metereológica num ficheiro de texto. 
+A função de calcular a temperatura média recebe uma tabela (tabMeteo), onde cada item representa um dia e contém a data e as temperaturas mínima e máxima daquele dia. Cada elemento em tabMeteo é uma lista (ou tupla) com três partes:Data (no formato de uma tupla, como (ano, mês, dia)),Temperatura mínima (um número),Temperatura máxima (um número).A função começa por criar uma lista vazia chamada res. Essa lista armazenará os resultados, que serão pares contendo a data e a temperatura média daquele dia. A função usa um for para percorrer cada dia em tabMeteo. Em cada iteração, o valor de dia será uma lista ou tupla com três elementos: a data, a temperatura mínima e a temperatura máxima. De seguida é calculada a média e com o comando append junta á lista. A função de guardar é bastante parecida á função usada no TPC6 para guardar uma turma num ficheiro. Neste caso usamos um ciclo for e criamos uma linha com as informações necessárias para serem transformadas em texto. Por fim pusemos a ser inserida a linha no ficheiro e este a fechar. 
+
+* Função Carregar tabela metereológica e Temperatura mínima mais baixa registada na tabela.
+Para a função de  carregar a tabela também é bastante parecida á usada anteriormente no TPC6 para carregar uma turma de um ficheiro. Começamos por abrir o ficheiro e colocamos a função a percorrer cada linha do ficheiro. De seguida colocamos a juntar cada um dos campos e o ficheiro a fechar. Para a função temperatura mínima mais baixa registada na tabela chamei á variável minima os indices 0 e 1 e colocamos que se a temperatura minima for menor que o valor de minima(variavel) seria essa a temperatura miníma. 
+
+* Função Calcula a amplitude térmica e função do dia em que aprecipitação teve valor máximo
+Para calcular a amplitude térmica (que consiste na diferença entre a temperatura máxima e a temperatura mínima) foi simplemente usado o ciclo for para as variáveis todas usadas anteriormente e adicionar (append) tmax-tmin. Para a função do dia em que a precipitação teve valor máximo foram defenidas novas variaveis para serem o maxprecipitaçao e o maxdata(que seria o dia). De seguida considerando ainda as mesmas variáveis utilizadas anteriormente foi concluido que se maxprecip fosse menor que a precipitaçao, entao a precipitaçao iria ser assumida como máxima o seu respetivo  dia como o dia que a precipitação teve valor máximo.
+
+* Função Tabela metereológica e limite p e devolve os dias em que a precipitação foi superior a p e função retorna o maior número consecutivo de dias com precipitação abaixo de p
+
+Para a função da tabela metereológica para os dias chuvosos apenas foi considerado as mesmas variáveis que anteriormente e que caso a precipitação seja maior que a variável p, então seria o dia dessa precipitação e da precipitação adicionado a lista inicial. Para a seguinte função começou-se por considerar os dias consecutivos como 0 e o contador como 0. De seguida voltou-se novamente a usar o ciclo for com as mesmas variáveis e considerou-se que se a precipitação for menor que p o contador iria ser juntado 1 e que se o contador fosse maior que os dias consecutivos, então esses passariam a ser os dias consecutivos uma vez que se a precipitação for menor que p seria mais um dia consecutivo caso isso acontecesse repetidamente. 
+
+Para juntar estas funções criei um menu da mesma forma que criei para todos os restantes trabalhos anteriores e por fim adicionei uma opção (0) para que o utilizador selecione caso deseje sair da aplicação e coloquei novamente a aparecer a mensagem de ("Obrigado e até á próxima") tendo no fim não voltando a colocar a função de menu para que não volte a aparecer e assim a aplicação seja encerrada. 
